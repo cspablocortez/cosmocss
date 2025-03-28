@@ -1,0 +1,279 @@
+/* cosmoCSS v0.1.0
+ * Created by Pablo Enoc (https://enocc.com)
+ * Copyright (c) 2025
+ * MIT License
+ *
+ */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+ */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --fs--2: clamp(0.6944rem, 0.6643rem + 0.151vw, 0.7813rem);
+    --fs--1: clamp(0.8333rem, 0.7971rem + 0.1812vw, 0.9375rem);
+    --fs-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+    --fs-1: clamp(1.2rem, 1.1478rem + 0.2609vw, 1.35rem);
+    --fs-2: clamp(1.44rem, 1.3774rem + 0.313vw, 1.62rem);
+    --fs-3: clamp(1.728rem, 1.6529rem + 0.3757vw, 1.944rem);
+    --fs-4: clamp(2.0736rem, 1.9834rem + 0.4508vw, 2.3328rem);
+    --fs-5: clamp(2.4883rem, 2.3801rem + 0.5409vw, 2.7994rem);
+}
+
+/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --space-3xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
+    --space-2xs: clamp(0.5rem, 0.4783rem + 0.1087vw, 0.5625rem);
+    --space-xs: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);
+    --space-s: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+    --space-m: clamp(1.5rem, 1.4348rem + 0.3261vw, 1.6875rem);
+    --space-l: clamp(2rem, 1.913rem + 0.4348vw, 2.25rem);
+    --space-xl: clamp(3rem, 2.8696rem + 0.6522vw, 3.375rem);
+    --space-2xl: clamp(4rem, 3.8261rem + 0.8696vw, 4.5rem);
+    --space-3xl: clamp(6rem, 5.7391rem + 1.3043vw, 6.75rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.25rem, 0.1413rem + 0.5435vw, 0.5625rem);
+    --space-2xs-xs: clamp(0.5rem, 0.3696rem + 0.6522vw, 0.875rem);
+    --space-xs-s: clamp(0.75rem, 0.6196rem + 0.6522vw, 1.125rem);
+    --space-s-m: clamp(1rem, 0.7609rem + 1.1957vw, 1.6875rem);
+    --space-m-l: clamp(1.5rem, 1.2391rem + 1.3043vw, 2.25rem);
+    --space-l-xl: clamp(2rem, 1.5217rem + 2.3913vw, 3.375rem);
+    --space-xl-2xl: clamp(3rem, 2.4783rem + 2.6087vw, 4.5rem);
+    --space-2xl-3xl: clamp(4rem, 3.0435rem + 4.7826vw, 6.75rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(1rem, 0.5652rem + 2.1739vw, 2.25rem);
+}
+
+/* @link https://utopia.fyi/grid/calculator?c=320,16,1.2,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --grid-max-width: 69.75rem;
+    --grid-gutter: var(--space-s-l, clamp(1rem, 0.4975rem + 2.5126vw, 2.25rem));
+    --grid-columns: 12;
+}
+
+.u-container {
+    max-width: var(--grid-max-width);
+    padding-inline: var(--grid-gutter);
+    margin-inline: auto;
+}
+
+.u-grid {
+    display: grid;
+    gap: var(--grid-gutter);
+}
+
+/* CosmoCSS */
+
+/* Variables */
+
+:root {
+    --font-family-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    font-size: var(--fs-0);
+    line-height: var(--space-m);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: var(--fs-5);
+    line-height: var(--fs-4);
+    margin-block: var(--space-m-l) var(--space-s-m);
+}
+
+h2 {
+    font-size: var(--fs-4);
+    line-height: var(--fs-3);
+    margin-block: var(--space-m-l) var(--space-s-m);
+}
+
+h3 {
+    font-size: var(--fs-3);
+    line-height: var(--fs-2);
+    margin-block: var(--space-s-m) var(--space-s);
+}
+
+h4 {
+    font-size: var(--fs-2);
+    line-height: var(--fs-1);
+    margin-block: var(--space-s-m) var(--space-s);
+}
+
+h5 {
+    font-size: var(--fs-1);
+    line-height: var(--fs-0);
+    margin-block: var(--space-s-m) var(--space-s);
+}
+
+h6 {
+    font-size: var(--fs-0);
+    line-height: var(--fs--1);
+    margin-block: var(--space-s-m) var(--space-s);
+}
+
+p {
+    font-size: var(--fs-0);
+    margin-block: var(--space-s-m) var(--space-s);
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+code {
+}
