@@ -16,11 +16,17 @@
                 A showcase of cosmoCSS formatting and action and how to use it.
             </p>
 
-            <nav>
-                <ul class="list-inline">
+            <nav class="toc">
+                <h2>Table of Contents</h2>
+                <ol>
                     <li><a href="#typography">Typography</a></li>
                     <li><a href="#lists">Lists</a></li>
-                </ul>
+                    <li>
+                        <a href="#Details and Summary">Details & Summary</a>
+                    </li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                </ol>
             </nav>
         </header>
 
@@ -149,6 +155,67 @@ console.log(greet('World'));</code></pre>
                     </li>
                     <li>Fourth item</li>
                 </ol>
+            </section>
+
+            <hr />
+
+            <section id="Details and Summary">
+                <h2>Details & Summary</h2>
+                <p>The original "Read More" button.</p>
+
+                <details>
+                    <summary>Click to expand this section</summary>
+                    <p>
+                        Congratulations! You've discovered the hidden content we
+                        pointed out.
+                    </p>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </details>
+            </section>
+
+            <section id="tables">
+                <h2>Tables</h2>
+                <p>Excel's distant HTML cousin.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Marty McFly</td>
+                            <td>marty@hillvalley.edu</td>
+                            <td>Time Traveler</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Doc Brown</td>
+                            <td>doc@brownenterprises.com</td>
+                            <td>Scientist</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Biff Tannen</td>
+                            <td>biff@tannenauto.com</td>
+                            <td>Car Washer</td>
+                            <td>Inactive</td>
+                        </tr>
+                        <tr>
+                            <td>Lorraine Baines</td>
+                            <td>lorraine@hillvalley.edu</td>
+                            <td>Student</td>
+                            <td>Active</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
         </main>
     </body>
