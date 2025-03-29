@@ -7,15 +7,12 @@ cosmoCSS is a drop-in stylesheet for modern web development. All you need to do 
 To use cosmoCSS, include the following line in the `<head>` of your HTML file:
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/cspablocortez/cosmocss@refs/heads/main/cosmo.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cspablocortez/cosmocss@refs/heads/main/cosmo.min.css" />
 ```
 
 ## Demo
 
-Take a look at the demo sit at <https://cosmocss.com>.
+Take a look at the demo website at <https://cosmocss.com>.
 
 ## Features
 
