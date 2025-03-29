@@ -203,6 +203,24 @@ table {
         "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
+
+    --color-bg: #fff;
+    --color-text-primary: #334159;
+    --color-text-secondary: #64748b;
+    --color-text-secondary-light: #94a3b8;
+    --color-link: #1d72fc;
+    --color-link-hover: #0b65ff;
+
+    /* Animation */
+    --transition-base: all 0.2s ease-in-out;
+
+    /* Gradients */
+
+    --gradient-link: linear-gradient(
+        135deg,
+        var(--color-link) 0%,
+        var(--color-link-hover) 100%
+    );
 }
 
 html {
@@ -210,6 +228,8 @@ html {
 }
 
 body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
     font-family: var(--font-family-sans);
     font-size: var(--fs-0);
     line-height: var(--space-m);
@@ -267,6 +287,45 @@ p {
     margin-block: var(--space-s-m) var(--space-s);
 }
 
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: var(--transition-base);
+    position: relative;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: var(--gradient-link);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+a:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+a[target="_blank"]:after {
+    content: "[↗]";
+    display: inline-block;
+    margin-left: 0.25em;
+    font-size: 0.6em;
+    font-weight: bold;
+    text-decoration: none;
+    vertical-align: super;
+}
+
 strong {
     font-weight: bold;
 }
@@ -276,4 +335,14 @@ em {
 }
 
 code {
+    font-family: var(--font-family-mono);
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    color: #c7254e;
+    font-size: 85%;
+    padding: 2px 4px;
+}
+
+small {
+    font-size: 80%;
 }
