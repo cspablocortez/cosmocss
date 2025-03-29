@@ -224,6 +224,7 @@ table {
     --color-link-hover: #0b65ff;
     --color-border: #e2e8f0;
     --color-progress: #339a48;
+    --color-notice: aliceblue;
 
     --success: #10b981;
     --success-light: #34d399;
@@ -318,6 +319,7 @@ table {
         --color-link-hover: #429efb;
         --color-border: #565d6a;
         --color-progress: #339a48;
+        --color-notice: #053157;
 
         --success: #1f8c68;
         --success-light: #32d398;
@@ -360,37 +362,37 @@ h6 {
 h1 {
     font-size: var(--fs-5);
     line-height: var(--fs-4);
-    margin-block: var(--space-m-l) var(--space-s-m);
+    margin-block: var(--space-l) var(--space-s-m);
 }
 
 h2 {
     font-size: var(--fs-4);
     line-height: var(--fs-3);
-    margin-block: var(--space-m-l) var(--space-s-m);
+    margin-block: var(--space-l) var(--space-s-m);
 }
 
 h3 {
     font-size: var(--fs-3);
     line-height: var(--fs-2);
-    margin-block: var(--space-m-l) var(--space-s-m);
+    margin-block: var(--space-l) var(--space-s-m);
 }
 
 h4 {
     font-size: var(--fs-2);
     line-height: var(--fs-1);
-    margin-block: var(--space-s-m) var(--space-s);
+    margin-block: var(--space-m) var(--space-s);
 }
 
 h5 {
     font-size: var(--fs-1);
     line-height: var(--fs-0);
-    margin-block: var(--space-s-m) var(--space-s);
+    margin-block: var(--space-m) var(--space-s);
 }
 
 h6 {
     font-size: var(--fs-0);
     line-height: var(--fs--1);
-    margin-block: var(--space-s-m) var(--space-s);
+    margin-block: var(--space-m) var(--space-s);
 }
 
 p {
@@ -456,6 +458,7 @@ pre {
     border-radius: var(--border-radius);
     padding: var(--space-xs);
     font-size: 85%;
+    overflow: auto;
 }
 
 pre > code {
@@ -503,7 +506,7 @@ hr {
 blockquote {
     border-left: 4px solid var(--color-text-primary);
     padding: var(--space-xs);
-    margin-bottom: var(--space-s);
+    margin-block: var(--space-l);
     font-style: italic;
     background-color: var(--color-bg-secondary);
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
@@ -788,7 +791,9 @@ input[type="submit"] {
     min-width: 6.5rem;
     display: inline-block;
     padding: var(--space-2xs) var(--space-s);
-    margin: 0.125rem 0.125rem 0.125rem 0;
+    /* margin: 0.125rem 0.125rem 0.125rem 0; */
+    margin-block: var(--space-s);
+    margin-inline: 0;
     background: var(--gradient-primary);
     color: white;
     border: none;
@@ -941,7 +946,7 @@ figure {
 
 figcaption {
     font-size: 0.875rem;
-    color: var(--color-secondary);
+    color: var(--color-text-secondary);
     text-align: center;
     margin-top: var(--space-2xs);
 }
@@ -981,4 +986,19 @@ aside {
     100% {
         opacity: 1;
     }
+}
+
+/* Utilities */
+
+.notice {
+    background-color: var(--color-notice);
+    padding: var(--space-xs);
+    border-radius: var(--border-radius);
+    margin-inline: auto;
+}
+
+.notice::before {
+    content: "ℹ️";
+    display: inline-block;
+    margin-right: var(--space-2xs);
 }
