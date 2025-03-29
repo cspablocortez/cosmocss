@@ -216,6 +216,7 @@ table {
     --color-primary: #353739;
     --color-primary-light: #495766;
     --color-primary-contrast: #6b7990;
+    --color-primary-invert: #364153;
 
     --color-secondary: #505968;
     --color-secondary-light: #808794;
@@ -226,6 +227,15 @@ table {
     --color-link-hover: #0b65ff;
     --color-border: #e2e8f0;
     --color-progress: #339a48;
+
+    --success: #10b981;
+    --success-light: #34d399;
+    --danger: #ef4444;
+    --danger-light: #f87171;
+    --warning: #f59e0b;
+    --warning-light: #fbbf24;
+    --info: #0ea5e9;
+    --info-light: #38bdf8;
 
     /* Animation */
     --transition-base: all 0.2s ease-in-out;
@@ -249,6 +259,27 @@ table {
         135deg,
         var(--color-secondary) 0%,
         var(--color-secondary-light) 100%
+    );
+
+    --gradient-success: linear-gradient(
+        135deg,
+        var(--success) 0%,
+        var(--success-light) 100%
+    );
+    --gradient-danger: linear-gradient(
+        135deg,
+        var(--danger) 0%,
+        var(--danger-light) 100%
+    );
+    --gradient-warning: linear-gradient(
+        135deg,
+        var(--warning) 0%,
+        var(--warning-light) 100%
+    );
+    --gradient-info: linear-gradient(
+        135deg,
+        var(--info) 0%,
+        var(--info-light) 100%
     );
 
     /* Shadows */
@@ -279,6 +310,7 @@ table {
         --color-primary: #353739;
         --color-primary-light: #495766;
         --color-primary-contrast: #6b7990;
+        -color-primary-invert: #364153;
 
         --color-secondary: #2c3647;
         --color-secondary-light: #808794;
@@ -289,6 +321,15 @@ table {
         --color-link-hover: #429efb;
         --color-border: #565d6a;
         --color-progress: #339a48;
+
+        --success: #1f8c68;
+        --success-light: #32d398;
+        --danger: #c52020;
+        --danger-light: #ff4646;
+        --warning: #e89b1a;
+        --warning-light: #fbbf24;
+        --info: #117fb0;
+        --info-light: #38bdf8;
     }
 }
 
@@ -749,7 +790,7 @@ input[type="submit"] {
     min-height: 3.1rem;
     min-width: 6.5rem;
     display: inline-block;
-    padding: var(--space-xs) var(--space-s);
+    padding: var(--space-2xs) var(--space-s);
     margin: 0.125rem 0.125rem 0.125rem 0;
     background: var(--gradient-primary);
     color: white;
@@ -864,8 +905,8 @@ button.outline,
 input[type="button"].outline,
 input[type="submit"].outline {
     background: transparent;
-    border: 1px solid var(--primary-invert);
-    color: var(--primary-invert);
+    border: 1px solid var(--color-primary-invert);
+    color: var(--color-primary-invert);
 }
 
 button.outline:hover,
