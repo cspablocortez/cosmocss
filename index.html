@@ -3,51 +3,105 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>cosmoCSS Demo - Classless CSS for semantic HTML</title>
+        <title>🪐 cosmoCSS</title>
         <link rel="icon" type="image/x-icon" href="favicon.png" />
 
         <!-- Add this line for the minified version -->
         <link rel="stylesheet" href="cosmo.css" />
     </head>
-    <body class="u-container">
+    <body>
         <header>
             <h1>🪐 cosmoCSS</h1>
-            <p>A cosmopolitan stylesheet for modern web applications.</p>
+
+            <p>
+                cosmoCSS is a drop-in stylesheet for modern web development. All
+                you need to do is write semantic HTML and include the stylesheet
+                in your project.
+            </p>
+
+            <h2>Installation</h2>
+
+            <p>
+                Paste this into the <code>&lt;head&gt;</code> element of your
+                HTML file:
+            </p>
+
+            <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"&gt;</code></pre>
+
+            <button style="display: flex; align-items: center; gap: 0.25rem">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="24"
+                    height="24"
+                    stroke-width="2"
+                >
+                    <path
+                        d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z"
+                    ></path>
+                    <path
+                        d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"
+                    ></path>
+                </svg>
+                Copy to clipboard
+            </button>
+
+            <hr />
 
             <nav class="toc">
                 <h2>Table of Contents</h2>
                 <ol>
                     <li><a href="#typography">Typography</a></li>
+                    <li><a href="#images">Images</a></li>
                     <li><a href="#lists">Lists</a></li>
+                    <li><a href="#buttons">Buttons</a></li>
                     <li>
                         <a href="#Details and Summary">Details & Summary</a>
                     </li>
                     <li><a href="#tables">Tables</a></li>
                     <li><a href="#forms">Forms</a></li>
+                    <li><a href="#forms">Progress Bars</a></li>
+                    <li><a href="#similar_projects">Similar Projects</a></li>
+                    <li><a href="#contributions">Contributions</a></li>
                 </ol>
             </nav>
         </header>
 
         <main>
-            <p class="notice">
-                This demo page details a select set of elements that are meant
-                to show off Simple.css’s styling, and provide HTML to help you
-                get started easily. If you want a comprehensive demonstration of
-                elements that may or may not be styled by Simple.css, please see
-                our test page.
-            </p>
-
             <section id="typography">
-                <h2>Basic Typography</h2>
+                <h2>Typography</h2>
+                <blockquote>
+                    <p>
+                        "Rather than tailoring disconnected designs to each of
+                        an ever-increasing number of web devices, we can treat
+                        them as facets of the same experience."
+                    </p>
+                    <p>
+                        —Ethan Marcotte,
+                        <cite
+                            ><a
+                                href="https://alistapart.com/article/responsive-web-design/"
+                                target="_blank"
+                                >Responsive Web Design</a
+                            ></cite
+                        >
+                    </p>
+                </blockquote>
                 <p>
-                    All the typography of Simple.css uses rem for sizing. This
-                    means that accessibility is maintained for those who change
-                    their browser font size. The body element has a size of
-                    1.15rem which makes all the standard font sizes slightly
-                    larger. This equates to 18.4px for paragraph text, instead
-                    of the standard 16px. The heading elements also have an
-                    increased top margin in order to break blocks of text up
-                    better.
+                    All typography in cosmoCSS is rendered dynamically with the
+                    Utopia fluid type scale
+                    <a
+                        href="https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12"
+                        target="_blank"
+                        >calculator</a
+                    >. Instead of setting fixed font sizes, we set a base size
+                    and a scale factor at two viewport endpoints (mobile and
+                    desktop). All other font sizes are interpolated between
+                    these two points.
                 </p>
 
                 <h1>Heading Level 1</h1>
@@ -58,56 +112,43 @@
                 <h6>Heading Level 6</h6>
 
                 <p>
-                    This is a standard paragraph. Lorem ipsum dolor sit amet,
-                    which is Latin for "I forgot to write actual content."
-                    Designers have been using this placeholder text since the
-                    1500s, proving that procrastination is timeless.
+                    This is a standard paragraph. You can make your writing come
+                    alive with
+                    <strong>bold text</strong> or <em>italic text</em>. Include
+                    <a href="#">links</a> to visit a new document. If opening a
+                    new tab, you will see an
+                    <a href="#" target="_blank">indicator</a> with a small
+                    arrow.
+                </p>
+
+                <h3>Inline Code</h3>
+                <p>
+                    It's easy to include inline code snippets within your text.
                 </p>
 
                 <p>
-                    <strong>Bold text</strong> for when you're really serious
-                    and <em>italic text</em> for when you're being sarcastic.
-                    You can also use <a href="#">links</a> which have proper
-                    hover states and indicate if they open in
-                    <a href="#" target="_blank">a new window</a>.
+                    For example, <code>puts "!dlrow ,olleH".reverse</code> will
+                    output <code>Hello, world!</code> in Ruby, a programming
+                    language created in Japan by Yukihiro Matsumoto in 1995.
                 </p>
 
-                <p>
-                    <small
-                        >This is smaller text, perfect for legal disclaimers
-                        nobody reads.</small
+                <h3>Code</h3>
+                <div>
+                    <p><strong>Keyboard input:</strong> <kbd>Cmd</kbd></p>
+
+                    <h2>Pre-formatted text</h2>
+                    <pre>
+P R E F O R M A T T E D T E X T
+! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~ </pre
                     >
-                </p>
+                </div>
 
-                <p>
-                    Code can be displayed inline with <code>code tags</code> or
-                    in blocks:
-                </p>
-
-                <h3>Pre without code</h3>
-                <pre>
-Roses are red,
-Violets are blue,
-This text is preformatted,
-And this poem is too.</pre
-                >
-
-                <h3>Pre with code</h3>
-                <pre><code>// This function says hello
-function greet(name) {
-    return `Hello, ${name}!`;
-}
-
-console.log(greet('World'));</code></pre>
-
-                <h3>Inline code in a paragraph</h3>
-                <p>
-                    When writing about programming, it's often useful to include
-                    <code>inline code snippets</code> within your text. For
-                    example, <code>const</code> is used to declare constants in
-                    JavaScript, or that the <code>&lt;body&gt;</code> tag
-                    contains the main content of an HTML document.
-                </p>
+                <h3>Blockquotes</h3>
 
                 <blockquote>
                     <p>
@@ -117,14 +158,42 @@ console.log(greet('World'));</code></pre>
                     <p>—Ortega y Gasset, <cite>Meditations on Quixote</cite></p>
                 </blockquote>
 
-                <p>Some other paragraph to create continuity.</p>
+                <p>Another filler paragraph to create continuity.</p>
+            </section>
+
+            <hr />
+
+            <section id="images">
+                <h2>Images</h2>
+
+                <p>
+                    Images share similar styling between
+                    <code>&lt;img&gt;</code> and
+                    <code>&lt;figure&gt;</code> elements. The only difference is
+                    the caption below the image, which adds a bit of block
+                    margin.
+                </p>
+
+                <figure>
+                    <img
+                        src="https://c.pxhere.com/images/cd/87/25ae7cfdb18a589e208eb46b2bb3-1460641.jpg!d"
+                        alt="Public domain Las Vegas photo"
+                    />
+                    <figcaption>
+                        An image within a figure element with a caption.
+                    </figcaption>
+                </figure>
             </section>
 
             <hr />
 
             <section id="lists">
                 <h2>Lists</h2>
-                <p>For when you need to organize your thoughts or groceries.</p>
+                <p>
+                    The table of contents above is an <code>ol</code> element
+                    with nested links in each <code>li</code>. Here are some
+                    more lists below.
+                </p>
 
                 <h3>Unordered List</h3>
                 <ul>
@@ -157,28 +226,72 @@ console.log(greet('World'));</code></pre>
 
             <hr />
 
+            <section id="buttons">
+                <h2>Buttons</h2>
+                <p>
+                    Any <code>&lt;button&gt;</code> element can be made to look
+                    like the examples below if you give it a class.
+                </p>
+                <button>No Class</button>
+                <button class="success">.success</button>
+                <button class="danger">.danger</button>
+                <button class="warning">.warning</button>
+                <button class="info">.info</button>
+                <button class="outline">.outline</button>
+                <button type="reset" disabled>Disabled</button>
+                <p>Empty buttons are shown as loading:</p>
+                <button></button>
+                <button disabled></button>
+                <script>
+                    const buttons =
+                        document.currentScript.parentElement.getElementsByTagName(
+                            "button",
+                        );
+                    for (let btn of buttons) {
+                        btn.addEventListener("click", function () {
+                            const className = this.className || "No Class";
+                            alert(
+                                `Button with ${className} class says: "Click!"`,
+                            );
+                        });
+                    }
+                </script>
+            </section>
+
+            <hr />
+
             <section id="Details and Summary">
                 <h2>Details & Summary</h2>
-                <p>The original "Read More" button.</p>
+                <p>Add a bit of context before letting users see more.</p>
 
                 <details>
-                    <summary>Click to expand this section</summary>
+                    <summary>See more</summary>
                     <p>
-                        Congratulations! You've discovered the hidden content we
-                        pointed out.
+                        This content is hidden until the user clicks the summary
+                        element above.
                     </p>
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                    </ul>
+                    <figure>
+                        <img
+                            src="https://www.publicdomainpictures.net/pictures/260000/velka/the-seven-magic-mountains.jpg"
+                            alt="Public Domain image of Seven Magic Mountains in Las Vegas"
+                        />
+                        <figcaption>
+                            Seven Magic Mountains outside Las Vegas
+                        </figcaption>
+                    </figure>
                 </details>
             </section>
 
             <section id="tables">
                 <h2>Tables</h2>
-                <p>Excel's distant HTML cousin.</p>
+                <p>
+                    Back in the old days of the web, developers used to create
+                    designs and layouts with this element.
+                </p>
                 <table>
+                    <caption>
+                        Table Caption
+                    </caption>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -189,27 +302,27 @@ console.log(greet('World'));</code></pre>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Marty McFly</td>
-                            <td>marty@hillvalley.edu</td>
-                            <td>Time Traveler</td>
+                            <td>Anakin Skywalker</td>
+                            <td>anakin@jeditemple.edu</td>
+                            <td>Padawan</td>
                             <td>Active</td>
                         </tr>
                         <tr>
-                            <td>Doc Brown</td>
-                            <td>doc@brownenterprises.com</td>
-                            <td>Scientist</td>
+                            <td>Padme Amidala</td>
+                            <td>queen@naboo.com</td>
+                            <td>Queen, Senator</td>
                             <td>Active</td>
                         </tr>
                         <tr>
-                            <td>Biff Tannen</td>
-                            <td>biff@tannenauto.com</td>
-                            <td>Car Washer</td>
+                            <td>Jango Fett</td>
+                            <td>jango@fett.com</td>
+                            <td>Bounty Hunter</td>
                             <td>Inactive</td>
                         </tr>
                         <tr>
-                            <td>Lorraine Baines</td>
-                            <td>lorraine@hillvalley.edu</td>
-                            <td>Student</td>
+                            <td>C-3PO</td>
+                            <td>lovetalking@tatooine.edu</td>
+                            <td>Droid</td>
                             <td>Active</td>
                         </tr>
                     </tbody>
@@ -220,7 +333,6 @@ console.log(greet('World'));</code></pre>
 
             <section id="forms">
                 <h2>Forms</h2>
-                <p>Where user data goes to live a fulfilling life.</p>
                 <form>
                     <label for="search-input">Search</label>
                     <input
@@ -315,27 +427,17 @@ console.log(greet('World'));</code></pre>
                         />
                         Option 2</label
                     >
-
-                    <button type="submit">Submit</button>
-                    <button type="reset" disabled>Defy</button>
                 </form>
-
-                <p>
-                    Empty buttons are shown as loading, giving you plenty of
-                    time add some content
-                </p>
-                <button></button>
-                <button disabled></button>
             </section>
 
             <hr />
 
             <section id="progress">
                 <h2>Progress</h2>
-                <p>Loading... Just like your patience.</p>
+                <p>Loading something...</p>
 
-                <p>70%</p>
-                <progress value="70" max="100"></progress>
+                <p>74%</p>
+                <progress value="74" max="100"></progress>
 
                 <p>No value</p>
                 <progress></progress>
@@ -343,60 +445,90 @@ console.log(greet('World'));</code></pre>
 
             <hr />
 
-            <section id="buttons">
-                <h2>Buttons</h2>
-                <p>Click me, I dare you.</p>
-                <button>No Class</button>
-                <button class="success">.success</button>
-                <button class="danger">.danger</button>
-                <button class="warning">.warning</button>
-                <button class="info">.info</button>
-                <button class="outline">.outline</button>
-                <script>
-                    const buttons =
-                        document.currentScript.parentElement.getElementsByTagName(
-                            "button",
-                        );
-                    for (let btn of buttons) {
-                        btn.addEventListener("click", function () {
-                            const className =
-                                this.className || "Absolutely No Class";
-                            alert(
-                                `Mr. ${className} says: "Ahh! How could you?!"`,
-                            );
-                        });
-                    }
-                </script>
+            <section id="similar_projects">
+                <h2>Similar Projects</h2>
+                <p>
+                    cosmoCSS follows in the footsteps of some popular
+                    "classless" or "drop-in" CSS projects. Please check them
+                    out!
+                </p>
+                <ul>
+                    <li>
+                        <a
+                            href="https://github.com/DigitallyTailored/Classless.css"
+                            target="_blank"
+                            >Classless CSS Framework</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://watercss.kognise.dev" target="_blank"
+                            >Water.css</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://simplecss.org" target="_blank"
+                            >SimpleCSS</a
+                        >
+                    </li>
+                </ul>
+                <p>
+                    cosmoCSS started as a fork of
+                    <a href="">Classless CSS</a>
+                    Framework, and it differs in the following ways:
+                </p>
+                <ul>
+                    <li>Strong focus on semantic HTML</li>
+                    <li>
+                        Dark mode follows browser preferences and does not
+                        require JavaScript
+                    </li>
+                    <li>
+                        Font scaling and responsive design are implemented via
+                        fluid scale calculator
+                    </li>
+                    <li>Styling follows a Meyer reset</li>
+                    <li>
+                        Your &lt;main&gt; element has a flex grow property so
+                        when you add a site footer, it actually stays at the
+                        bottom of the viewport!
+                    </li>
+                </ul>
             </section>
 
             <hr />
 
-            <section id="images">
-                <h2>Images</h2>
-                <p>Worth exactly 1,000 words, no more, no less.</p>
-
-                <figure>
-                    <img
-                        src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=800&h=500&fit=crop"
-                        alt="Sunrise over invisible mountains"
-                    />
-                    <figcaption>
-                        A beautiful sunrise over invisible mountains
-                    </figcaption>
-                </figure>
+            <section id="contributions">
+                <h2>Contributions</h2>
+                <p>
+                    cosmoCSS is open source and welcomes contributions from the
+                    community. Check out the
+                    <a
+                        href="https://github.com/cspablocortez/cosmocss"
+                        target="_blank"
+                        >Github repository</a
+                    >
+                    and if you find any issues, have any comments, or want to
+                    contribute, please open an issue or pull request.
+                </p>
             </section>
+        </main>
 
+        <footer>
+            <hr />
             <p>
-                For a more complete list of HTML5 elements, refer to our
-                <a href="/test.html">test page</a>.
+                <small>
+                    🪐cosmoCSS was created by
+                    <a href="https://enocc.com">Pablo Enoc</a> and is licensed
+                    under the
+                    <a href="https://opensource.org/license/mit">MIT</a>
+                    License.
+                    <br />
+                    Made with ♥️ in Las Vegas, NV
+                </small>
             </p>
 
-            <footer>
-                <small style="text-align: center">
-                    Made with ♥️ in Las Vegas, Nevada. This website and its
-                    source code is <a href="#">MIT</a>
-                </small>
-            </footer>
-        </main>
+            <p></p>
+            <p style="text-align: end"><a href="#top">Top ↑</a></p>
+        </footer>
     </body>
 </html>
