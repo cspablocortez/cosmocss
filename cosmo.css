@@ -213,11 +213,11 @@ table {
     --color-text-secondary: #64748b;
     --color-text-secondary-light: #94a3b8;
 
-    --color-primary: #084293;
-    --color-primary-light: #3b5579;
-    --color-primary-contrast: #5485d3;
+    --color-primary: #353739;
+    --color-primary-light: #495766;
+    --color-primary-contrast: #6b7990;
 
-    --color-secondary: #7492c3;
+    --color-secondary: #505968;
     --color-secondary-light: #808794;
 
     --color-code-bg: #f9f2f4;
@@ -542,7 +542,7 @@ td {
 }
 
 thead {
-    background: var(--color-primary-light);
+    background: var(--color-secondary);
 }
 
 th {
@@ -562,7 +562,7 @@ tr:hover td {
 }
 
 tfoot {
-    background: var(--color-secondary);
+    background: var(--color-secondary-light);
 }
 
 /* Forms */
