@@ -45,8 +45,6 @@ samp,
 small,
 strike,
 strong,
-sub,
-sup,
 tt,
 var,
 b,
@@ -116,8 +114,7 @@ body {
     line-height: 1;
 }
 
-blockquote,
-q {
+blockquote {
     quotes: none;
 }
 blockquote:before,
@@ -310,7 +307,7 @@ table {
         --color-primary: #353739;
         --color-primary-light: #495766;
         --color-primary-contrast: #6b7990;
-        -color-primary-invert: #364153;
+        --color-primary-invert: #364153;
 
         --color-secondary: #2c3647;
         --color-secondary-light: #808794;
@@ -921,6 +918,32 @@ input[type="submit"].outline:hover {
 progress {
     height: 2rem;
     width: 100%;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--space-2xs);
+    transition: var(--transition-base);
+    /* box-shadow: var(--shadow); */
+}
+
+img:hover {
+    transform: scale(1.01);
+    box-shadow: var(--shadow-sm);
+}
+
+figure {
+    text-align: center;
+    margin-bottom: var(--space-s);
+}
+
+figcaption {
+    font-size: 0.875rem;
+    color: var(--color-secondary);
+    text-align: center;
+    margin-top: var(--space-2xs);
 }
 
 /* Transitions */
