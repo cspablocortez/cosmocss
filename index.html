@@ -15,6 +15,13 @@
             <p>
                 A showcase of cosmoCSS formatting and action and how to use it.
             </p>
+
+            <nav>
+                <ul class="list-inline">
+                    <li><a href="#typography">Typography</a></li>
+                    <li><a href="#lists">Lists</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main>
@@ -26,85 +33,123 @@
                 our test page.
             </p>
 
-            <h2>Basic Typography</h2>
-            <p>
-                All the typography of Simple.css uses rem for sizing. This means
-                that accessibility is maintained for those who change their
-                browser font size. The body element has a size of 1.15rem which
-                makes all the standard font sizes slightly larger. This equates
-                to 18.4px for paragraph text, instead of the standard 16px. The
-                heading elements also have an increased top margin in order to
-                break blocks of text up better.
-            </p>
+            <section id="typography">
+                <h2>Basic Typography</h2>
+                <p>
+                    All the typography of Simple.css uses rem for sizing. This
+                    means that accessibility is maintained for those who change
+                    their browser font size. The body element has a size of
+                    1.15rem which makes all the standard font sizes slightly
+                    larger. This equates to 18.4px for paragraph text, instead
+                    of the standard 16px. The heading elements also have an
+                    increased top margin in order to break blocks of text up
+                    better.
+                </p>
 
-            <h1>Heading Level 1</h1>
-            <h2>Heading Level 2</h2>
-            <h3>Heading Level 3</h3>
-            <h4>Heading Level 4</h4>
-            <h5>Heading Level 5</h5>
-            <h6>Heading Level 6</h6>
+                <h1>Heading Level 1</h1>
+                <h2>Heading Level 2</h2>
+                <h3>Heading Level 3</h3>
+                <h4>Heading Level 4</h4>
+                <h5>Heading Level 5</h5>
+                <h6>Heading Level 6</h6>
 
-            <p>
-                This is a standard paragraph. Lorem ipsum dolor sit amet, which
-                is Latin for "I forgot to write actual content." Designers have
-                been using this placeholder text since the 1500s, proving that
-                procrastination is timeless.
-            </p>
+                <p>
+                    This is a standard paragraph. Lorem ipsum dolor sit amet,
+                    which is Latin for "I forgot to write actual content."
+                    Designers have been using this placeholder text since the
+                    1500s, proving that procrastination is timeless.
+                </p>
 
-            <p>
-                <strong>Bold text</strong> for when you're really serious and
-                <em>italic text</em> for when you're being sarcastic. You can
-                also use <a href="#">links</a> which have proper hover states
-                and indicate if they open in
-                <a href="#" target="_blank">a new window</a>.
-            </p>
+                <p>
+                    <strong>Bold text</strong> for when you're really serious
+                    and <em>italic text</em> for when you're being sarcastic.
+                    You can also use <a href="#">links</a> which have proper
+                    hover states and indicate if they open in
+                    <a href="#" target="_blank">a new window</a>.
+                </p>
 
-            <p>
-                <small
-                    >This is smaller text, perfect for legal disclaimers nobody
-                    reads.</small
+                <p>
+                    <small
+                        >This is smaller text, perfect for legal disclaimers
+                        nobody reads.</small
+                    >
+                </p>
+
+                <p>
+                    Code can be displayed inline with <code>code tags</code> or
+                    in blocks:
+                </p>
+
+                <h3>Pre without code</h3>
+                <pre>
+Roses are red,
+Violets are blue,
+This text is preformatted,
+And this poem is too.</pre
                 >
-            </p>
 
-            <p>
-                Code can be displayed inline with <code>code tags</code> or in
-                blocks:
-            </p>
-
-            <h3>Pre without code</h3>
-            <pre>
-    Roses are red,
-    Violets are blue,
-    This text is preformatted,
-    And this poem is too.</pre
-            >
-
-            <h3>Pre with code</h3>
-            <pre><code>// This function says hello
+                <h3>Pre with code</h3>
+                <pre><code>// This function says hello
 function greet(name) {
     return `Hello, ${name}!`;
 }
 
 console.log(greet('World'));</code></pre>
 
-            <h3>Inline code in a paragraph</h3>
-            <p>
-                When writing about programming, it's often useful to include
-                <code>inline code snippets</code> within your text. For example,
-                <code>const</code> is used to declare constants in JavaScript,
-                or that the <code>&lt;body&gt;</code> tag contains the main
-                content of an HTML document.
-            </p>
-
-            <blockquote>
+                <h3>Inline code in a paragraph</h3>
                 <p>
-                    "I am I and my circumstance; and, if I do not save it, I do
-                    not save myself."
+                    When writing about programming, it's often useful to include
+                    <code>inline code snippets</code> within your text. For
+                    example, <code>const</code> is used to declare constants in
+                    JavaScript, or that the <code>&lt;body&gt;</code> tag
+                    contains the main content of an HTML document.
                 </p>
-                <p>—Ortega y Gasset, <cite>Meditations on Quixote</cite></p>
-            </blockquote>
 
-            <p>Some other paragraph to create continuity.</p>
+                <blockquote>
+                    <p>
+                        "I am I and my circumstance; and, if I do not save it, I
+                        do not save myself."
+                    </p>
+                    <p>—Ortega y Gasset, <cite>Meditations on Quixote</cite></p>
+                </blockquote>
+
+                <p>Some other paragraph to create continuity.</p>
+            </section>
+
+            <hr />
+
+            <section id="lists">
+                <h2>Lists</h2>
+                <p>For when you need to organize your thoughts or groceries.</p>
+
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>
+                        Third item with nested list
+                        <ul>
+                            <li>Nested item 1</li>
+                            <li>Nested item 2</li>
+                        </ul>
+                    </li>
+                    <li>Fourth item</li>
+                </ul>
+
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>
+                        Third item with nested list
+                        <ol>
+                            <li>Nested item 1</li>
+                            <li>Nested item 2</li>
+                        </ol>
+                    </li>
+                    <li>Fourth item</li>
+                </ol>
+            </section>
         </main>
     </body>
 </html>
