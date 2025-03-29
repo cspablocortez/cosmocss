@@ -203,6 +203,10 @@ table {
 
     /* Colors */
     --color-primary: #13181f;
+    --color-primary-light: #1f2937;
+    --color-secondary: #515761;
+    --color-secondary-light: #808794;
+
     --color-bg: #fff;
     --color-bg-secondary: #f3f3f3;
     --color-text-primary: #334159;
@@ -221,6 +225,12 @@ table {
         135deg,
         var(--color-link) 0%,
         var(--color-link-hover) 100%
+    );
+
+    --gradient-secondary: linear-gradient(
+        135deg,
+        var(--color-secondary) 0%,
+        var(--color-secondary-light) 100%
     );
 
     /* Shadows */
@@ -444,4 +454,52 @@ details summary:after {
 details > *:not(summary) {
     cursor: auto;
     margin-top: var(--space-2xs);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: var(--space-s);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+caption {
+    margin-block: var(--space-s);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+th,
+td {
+    padding: var(--space-xs);
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+}
+
+thead {
+    background: var(--color-secondary);
+}
+
+th {
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+tfoot {
+    background: var(--color-secondary-light);
 }
