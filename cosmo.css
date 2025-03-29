@@ -946,6 +946,12 @@ figcaption {
     margin-top: var(--space-2xs);
 }
 
+/* Footer */
+
+footer {
+    margin-block: var(--space-s);
+}
+
 /* Transitions */
 body,
 a,
