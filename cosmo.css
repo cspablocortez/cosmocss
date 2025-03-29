@@ -212,7 +212,9 @@ table {
     --color-text-primary: #334159;
     --color-text-secondary: #64748b;
     --color-text-secondary-light: #94a3b8;
-    --color-link: #1d72fc;
+    --color-code-bg: #f9f2f4;
+
+    --color-link: #0071e3;
     --color-link-hover: #0b65ff;
     --color-border: #e2e8f0;
 
@@ -244,6 +246,25 @@ table {
 
     /* Border radius */
     --border-radius: var(--space-3xs);
+}
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: rgb(17 18 20);
+        --color-bg-secondary: rgb(35 35 41);
+
+        --color-text-primary: #e9eaed;
+        --color-text-secondary: #94a3b8;
+        --color-text-secondary-light: #64748b;
+        --color-link: #2e89e5;
+        --color-link-hover: #429efb;
+
+        --color-code-bg: #301a20;
+
+        --color-border: #334159;
+    }
 }
 
 html {
@@ -357,7 +378,7 @@ small {
 
 code {
     font-family: var(--font-family-mono);
-    background-color: #f9f2f4;
+    background-color: var(--color-code-bg);
     border-radius: 4px;
     color: #c7254e;
     font-size: 85%;
@@ -376,6 +397,22 @@ pre > code {
     background-color: transparent;
     color: var(--color-text-primary);
     font-size: 100%;
+}
+
+kbd {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.2),
+        0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+    color: #333;
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
 }
 
 strong {
@@ -458,13 +495,21 @@ details > *:not(summary) {
 
 /* Tables */
 table {
-    width: 100%;
     border-collapse: separate;
     border-spacing: 0;
     margin-bottom: var(--space-s);
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+
+@media screen and (min-width: 480px) {
+    table {
+        display: table;
+    }
 }
 
 caption {
