@@ -1,141 +1,23 @@
-/* cosmoCSS v0.1.0
+/* cosmoCSS v1.0.0
  * Created by Pablo Enoc (https://enocc.com)
  * Copyright (c) 2025
  * MIT License
  *
- */
-
-/* http://meyerweb.com/eric/tools/css/reset/
-    v2.0 | 20110126
-    License: none (public domain)
- */
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-
-blockquote {
-    quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: "";
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+ * with signficant code from:
+ *
+ * Modern Classless CSS Framework v1.0
+ * Created by Luke Heyburn
+ * Digitally Tailored (https://digitallytailored.com)
+ * MIT License
+ *
+*/
 
 * {
     box-sizing: border-box;
 }
 
-/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-
 :root {
+    /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
     --fs--2: clamp(0.6944rem, 0.6643rem + 0.151vw, 0.7813rem);
     --fs--1: clamp(0.8333rem, 0.7971rem + 0.1812vw, 0.9375rem);
     --fs-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
@@ -144,11 +26,8 @@ table {
     --fs-3: clamp(1.728rem, 1.6529rem + 0.3757vw, 1.944rem);
     --fs-4: clamp(2.0736rem, 1.9834rem + 0.4508vw, 2.3328rem);
     --fs-5: clamp(2.4883rem, 2.3801rem + 0.5409vw, 2.7994rem);
-}
 
-/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-
-:root {
+    /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
     --space-3xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
     --space-2xs: clamp(0.5rem, 0.4783rem + 0.1087vw, 0.5625rem);
     --space-xs: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);
@@ -156,47 +35,18 @@ table {
     --space-m: clamp(1.5rem, 1.4348rem + 0.3261vw, 1.6875rem);
     --space-l: clamp(2rem, 1.913rem + 0.4348vw, 2.25rem);
     --space-xl: clamp(3rem, 2.8696rem + 0.6522vw, 3.375rem);
-    --space-2xl: clamp(4rem, 3.8261rem + 0.8696vw, 4.5rem);
-    --space-3xl: clamp(6rem, 5.7391rem + 1.3043vw, 6.75rem);
 
     /* One-up pairs */
-    --space-3xs-2xs: clamp(0.25rem, 0.1413rem + 0.5435vw, 0.5625rem);
-    --space-2xs-xs: clamp(0.5rem, 0.3696rem + 0.6522vw, 0.875rem);
-    --space-xs-s: clamp(0.75rem, 0.6196rem + 0.6522vw, 1.125rem);
     --space-s-m: clamp(1rem, 0.7609rem + 1.1957vw, 1.6875rem);
-    --space-m-l: clamp(1.5rem, 1.2391rem + 1.3043vw, 2.25rem);
-    --space-l-xl: clamp(2rem, 1.5217rem + 2.3913vw, 3.375rem);
-    --space-xl-2xl: clamp(3rem, 2.4783rem + 2.6087vw, 4.5rem);
-    --space-2xl-3xl: clamp(4rem, 3.0435rem + 4.7826vw, 6.75rem);
 
     /* Custom pairs */
     --space-s-l: clamp(1rem, 0.5652rem + 2.1739vw, 2.25rem);
-}
 
-/* @link https://utopia.fyi/grid/calculator?c=320,16,1.2,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-
-:root {
+    /* @link https://utopia.fyi/grid/calculator?c=320,16,1.2,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
     --grid-max-width: 920px;
     --grid-gutter: var(--space-s-l, clamp(1rem, 0.4975rem + 2.5126vw, 2.25rem));
     --grid-columns: 12;
-}
 
-.u-container {
-    max-width: var(--grid-max-width);
-    padding-inline: var(--grid-gutter);
-    margin-inline: auto;
-}
-
-.u-grid {
-    display: grid;
-    gap: var(--grid-gutter);
-}
-
-/* CosmoCSS */
-
-/* Variables */
-
-:root {
     --font-family-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -205,27 +55,21 @@ table {
     /* Colors */
     --color-bg: #fff;
     --color-bg-secondary: #f3f3f3;
-
     --color-text-primary: #334159;
     --color-text-secondary: #64748b;
     --color-text-secondary-light: #94a3b8;
-
     --color-primary: #353739;
     --color-primary-light: #495766;
     --color-primary-contrast: #6b7990;
     --color-primary-invert: #364153;
-
     --color-secondary: #505968;
     --color-secondary-light: #808794;
-
     --color-code-bg: #f9f2f4;
-
     --color-link: #0071e3;
     --color-link-hover: #0b65ff;
     --color-border: #e2e8f0;
     --color-progress: #339a48;
     --color-notice: aliceblue;
-
     --success: #10b981;
     --success-light: #34d399;
     --danger: #ef4444;
@@ -237,22 +81,23 @@ table {
 
     /* Animation */
     --transition-base: all 0.2s ease-in-out;
-    --transition-slow: all 0.2s ease-in-out;
+    --transition-slow: all 0.3s ease-in-out;
 
     /* Gradients */
-
     --gradient-link: linear-gradient(
         135deg,
         var(--color-link) 0%,
         var(--color-link-hover) 100%
     );
 
+    /* Used in primary buttons */
     --gradient-primary: linear-gradient(
         135deg,
         var(--color-primary) 0%,
         var(--color-primary-contrast) 100%
     );
 
+    /* Used in disabled buttons */
     --gradient-secondary: linear-gradient(
         135deg,
         var(--color-secondary) 0%,
@@ -282,12 +127,6 @@ table {
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-        0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
     /* Border radius */
     --border-radius: var(--space-3xs);
@@ -307,8 +146,8 @@ table {
 
         --color-primary: #353739;
         --color-primary-light: #495766;
-        --color-primary-contrast: #6b7990;
-        --color-primary-invert: #364153;
+        --color-primary-contrast: #3e4349;
+        --color-primary-invert: #e9eaed;
 
         --color-secondary: #2c3647;
         --color-secondary-light: #808794;
@@ -332,11 +171,28 @@ table {
     }
 }
 
+.u-container,
+body {
+    max-width: var(--grid-max-width);
+    padding-inline: var(--grid-gutter);
+    margin-inline: auto;
+}
+
+.u-grid {
+    display: grid;
+    gap: var(--grid-gutter);
+}
+
+/* CosmoCSS */
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: var(--color-bg);
     color: var(--color-text-primary);
     font-family: var(--font-family-sans);
@@ -344,6 +200,10 @@ body {
     line-height: var(--space-m);
     transition: var(--transition-slow);
     animation: fadeIn 0.5s ease-out;
+}
+
+main {
+    flex-grow: 1;
 }
 
 /* Typography */
@@ -619,12 +479,7 @@ tfoot {
 
 /* Forms */
 form {
-    /* background-color: var(--color-bg-secondary); */
-    padding: var(--space-s);
-    border-radius: var(--border-radius);
-    /* box-shadow: var(--shadow-sm); */
     margin-bottom: var(--space-s);
-    border: 1px solid var(--color-border);
 }
 
 form > div {
@@ -931,7 +786,6 @@ img {
     height: auto;
     border-radius: var(--space-2xs);
     transition: var(--transition-base);
-    /* box-shadow: var(--shadow); */
 }
 
 img:hover {
