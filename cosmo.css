@@ -252,6 +252,8 @@ table {
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --color-secondary: #2c3647;
+
         --color-bg: rgb(17 18 20);
         --color-bg-secondary: rgb(35 35 41);
 
@@ -289,7 +291,7 @@ h6 {
     letter-spacing: -0.025em;
     text-wrap: balance;
     font-weight: bold;
-    scroll-margin-top: 1rem;
+    scroll-margin-top: var(--space-l);
 }
 
 h1 {
@@ -526,7 +528,7 @@ td {
 }
 
 thead {
-    background: var(--color-secondary);
+    background: var(--color-primary-light);
 }
 
 th {
@@ -546,5 +548,5 @@ tr:hover td {
 }
 
 tfoot {
-    background: var(--color-secondary-light);
+    background: var(--color-secondary);
 }
