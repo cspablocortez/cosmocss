@@ -5,9 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>🪐 cosmoCSS</title>
         <link rel="icon" type="image/x-icon" href="favicon.png" />
-
-        <!-- Add this line for the minified version -->
-        <link rel="stylesheet" href="cosmo.css" />
+        <link rel="stylesheet" href="cosmo.min.css" />
     </head>
     <body>
         <header>
@@ -26,7 +24,7 @@
                 HTML file:
             </p>
 
-            <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"&gt;</code></pre>
+            <pre><code>&lt;link rel="stylesheet" href="https://example.com"&gt;</code></pre>
 
             <button style="display: flex; align-items: center; gap: 0.25rem">
                 <svg
@@ -64,7 +62,7 @@
                     </li>
                     <li><a href="#tables">Tables</a></li>
                     <li><a href="#forms">Forms</a></li>
-                    <li><a href="#forms">Progress Bars</a></li>
+                    <li><a href="#progress">Progress Bars</a></li>
                     <li><a href="#similar_projects">Similar Projects</a></li>
                     <li><a href="#contributions">Contributions</a></li>
                 </ol>
@@ -98,7 +96,7 @@
                         href="https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12"
                         target="_blank"
                         >calculator</a
-                    >. Instead of setting fixed font sizes, we set a base size
+                    >. Instead of setting fixed font sizes, there is a base size
                     and a scale factor at two viewport endpoints (mobile and
                     desktop). All other font sizes are interpolated between
                     these two points.
@@ -284,10 +282,7 @@ p q r s t u v w x y z { | } ~ </pre
 
             <section id="tables">
                 <h2>Tables</h2>
-                <p>
-                    Back in the old days of the web, developers used to create
-                    designs and layouts with this element.
-                </p>
+
                 <table>
                     <caption>
                         Table Caption
@@ -486,11 +481,10 @@ p q r s t u v w x y z { | } ~ </pre
                         Font scaling and responsive design are implemented via
                         fluid scale calculator
                     </li>
-                    <li>Styling follows a Meyer reset</li>
                     <li>
-                        Your &lt;main&gt; element has a flex grow property so
-                        when you add a site footer, it actually stays at the
-                        bottom of the viewport!
+                        Your <code>&lt;main&gt;</code> element has a flex grow
+                        property so when you add a site footer, it actually
+                        stays at the bottom of the viewport!
                     </li>
                 </ul>
             </section>
@@ -517,9 +511,7 @@ p q r s t u v w x y z { | } ~ </pre
             <hr />
             <p>
                 <small>
-                    🪐cosmoCSS was created by
-                    <a href="https://enocc.com">Pablo Enoc</a> and is licensed
-                    under the
+                    🪐cosmoCSS is licensed under the
                     <a href="https://opensource.org/license/mit">MIT</a>
                     License.
                     <br />
