@@ -225,9 +225,11 @@ table {
     --color-link: #0071e3;
     --color-link-hover: #0b65ff;
     --color-border: #e2e8f0;
+    --color-progress: #339a48;
 
     /* Animation */
     --transition-base: all 0.2s ease-in-out;
+    --transition-slow: all 0.2s ease-in-out;
 
     /* Gradients */
 
@@ -266,20 +268,27 @@ table {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-secondary: #2c3647;
-
+        /* Colors */
         --color-bg: rgb(17 18 20);
         --color-bg-secondary: rgb(35 35 41);
 
         --color-text-primary: #e9eaed;
         --color-text-secondary: #94a3b8;
         --color-text-secondary-light: #64748b;
-        --color-link: #2e89e5;
-        --color-link-hover: #429efb;
+
+        --color-primary: #353739;
+        --color-primary-light: #495766;
+        --color-primary-contrast: #6b7990;
+
+        --color-secondary: #2c3647;
+        --color-secondary-light: #808794;
 
         --color-code-bg: #301a20;
 
-        --color-border: #334159;
+        --color-link: #2e89e5;
+        --color-link-hover: #429efb;
+        --color-border: #565d6a;
+        --color-progress: #339a48;
     }
 }
 
@@ -293,6 +302,8 @@ body {
     font-family: var(--font-family-sans);
     font-size: var(--fs-0);
     line-height: var(--space-m);
+    transition: var(--transition-slow);
+    animation: fadeIn 0.5s ease-out;
 }
 
 /* Typography */
@@ -862,4 +873,42 @@ input[type="button"].outline:hover,
 input[type="submit"].outline:hover {
     background-color: var(--color-primary);
     color: white;
+}
+
+/* Progress Bar */
+
+progress {
+    height: 2rem;
+    width: 100%;
+}
+
+/* Transitions */
+body,
+a,
+button,
+input,
+select,
+textarea,
+th,
+td,
+code,
+pre,
+blockquote,
+article,
+section,
+aside {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
