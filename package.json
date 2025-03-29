@@ -1,0 +1,11 @@
+{
+  "name": "cosmocss",
+  "version": "1.0.0",
+  "description": "A drop-in CSS stylesheet for modern websites.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node minify.js"
+  },
+  "private": true
+}
