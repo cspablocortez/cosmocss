@@ -115,10 +115,7 @@ section {
 body {
     line-height: 1;
 }
-ol,
-ul {
-    list-style: none;
-}
+
 blockquote,
 q {
     quotes: none;
@@ -213,6 +210,7 @@ table {
     --color-text-secondary-light: #94a3b8;
     --color-link: #1d72fc;
     --color-link-hover: #0b65ff;
+    --color-border: #e2e8f0;
 
     /* Animation */
     --transition-base: all 0.2s ease-in-out;
@@ -250,6 +248,7 @@ body {
     line-height: var(--space-m);
 }
 
+/* Typography */
 h1,
 h2,
 h3,
@@ -376,6 +375,18 @@ em {
     font-style: italic;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--color-border),
+        transparent
+    );
+    margin: var(--space-l) 0;
+}
+
 blockquote {
     border-left: 4px solid var(--color-text-primary);
     padding: var(--space-xs);
@@ -395,4 +406,19 @@ blockquote {
 
 blockquote cite {
     font-style: italic;
+}
+
+/* Lists */
+ul,
+ol {
+    margin-bottom: var(--space-xs);
+    padding-left: var(--space-m); /* 1.5rem */
+}
+
+li {
+    margin-block: var(--space-3xs);
+}
+
+li:last-child {
+    margin-bottom: 0;
 }
