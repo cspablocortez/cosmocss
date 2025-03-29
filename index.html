@@ -341,6 +341,34 @@ console.log(greet('World'));</code></pre>
                 <progress></progress>
             </section>
 
+            <hr />
+
+            <section id="buttons">
+                <h2>Buttons</h2>
+                <p>Click me, I dare you.</p>
+                <button>No Class</button>
+                <button class="success">.success</button>
+                <button class="danger">.danger</button>
+                <button class="warning">.warning</button>
+                <button class="info">.info</button>
+                <button class="outline">.outline</button>
+                <script>
+                    const buttons =
+                        document.currentScript.parentElement.getElementsByTagName(
+                            "button",
+                        );
+                    for (let btn of buttons) {
+                        btn.addEventListener("click", function () {
+                            const className =
+                                this.className || "Absolutely No Class";
+                            alert(
+                                `Mr. ${className} says: "Ahh! How could you?!"`,
+                            );
+                        });
+                    }
+                </script>
+            </section>
+
             <p>
                 For more HTML5 elements, you can refer to our
                 <a href="/test.html">test page</a>.
