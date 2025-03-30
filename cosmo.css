@@ -367,6 +367,7 @@ blockquote {
     border-left: 4px solid var(--color-text-primary);
     padding: var(--space-xs);
     margin-block: var(--space-l);
+    margin-inline: 0;
     font-style: italic;
     background-color: var(--color-bg-secondary);
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
