@@ -27,9 +27,12 @@
                 HTML file:
             </p>
 
-            <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cspablocortez/cosmocss@refs/heads/main/cosmo.min.css"&gt;</code></pre>
+            <pre><code id="cdn-link">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cspablocortez/cosmocss@refs/heads/main/cosmo.min.css"&gt;</code></pre>
 
-            <button style="display: flex; align-items: center; gap: 0.25rem">
+            <button
+                id="copy-button"
+                style="display: flex; align-items: center; gap: 0.25rem"
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -50,6 +53,23 @@
                 </svg>
                 Copy to clipboard
             </button>
+
+            <script>
+                document
+                    .getElementById("copy-button")
+                    .addEventListener("click", function () {
+                        const text =
+                            document.getElementById("cdn-link").innerText;
+                        navigator.clipboard
+                            .writeText(text)
+                            .then(() => {
+                                alert("Copied to clipboard!");
+                            })
+                            .catch((err) => {
+                                console.error("Failed to copy: ", err);
+                            });
+                    });
+            </script>
 
             <hr />
 
