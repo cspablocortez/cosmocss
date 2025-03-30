@@ -265,6 +265,7 @@ a {
     text-decoration: none;
     transition: var(--transition-base);
     position: relative;
+    width: min-content;
 }
 
 a:hover {
