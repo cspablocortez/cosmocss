@@ -15,7 +15,7 @@ function minifyCSS(css) {
 }
 
 const inputFile = path.join(__dirname, "cosmo.css");
-const outputFile = path.join(__dirname, "cosmo.min.css");
+const outputFile = path.join(__dirname, "cosmo.minified.css");
 
 try {
   const data = await fs.readFile(inputFile, "utf8");
