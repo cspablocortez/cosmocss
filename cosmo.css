@@ -265,7 +265,7 @@ a {
     text-decoration: none;
     transition: var(--transition-base);
     position: relative;
-    width: min-content;
+    width: fit-content;
 }
 
 a:hover {
@@ -798,6 +798,8 @@ img:hover {
 figure {
     text-align: center;
     margin-bottom: var(--space-s);
+    width: 100%;
+    margin-inline: auto;
 }
 
 figcaption {
